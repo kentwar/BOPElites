@@ -1,31 +1,20 @@
-# BOP-Elites-2022
-A Working repository for BOP-Elites for collaborative development
+# BOP-Elites-2024
+A Working repository for BOP-Elites for collaborative development.
 
-### Current State:
-
-Tested Working : 
-
-Domain - RobotArm
-acq_fun - BOP-Known-features
-         - SAIL
-         - BOP- Unknown Descriptors (UKD)
-         - MAP- Elites
+This is repurposed research code, made available for comparison for scientific purposes. Things may not work as intended because this was developed on linux, and I am now primarily using windows and there were some strange migration issues. 
+so please contact me so we can make the work together 
 
 ### How to use:
 
-Just run the test.py file
+There are executable self contained experiments in the tutorials folder. This is intended to show basic usage
 
 ## Requirements:
 
-Not yet added.
+the requirements.yml allows for installation with conda. It is currently defined for windows install and may need tampering with to get it working with other OS
 
-## TODO
+## Known Bugs
 
-Still to do / Partially to do
-3. add invalid point modelling (with support vector machines)
-4. add results management - Plotting etc. 
+- There aren't any, which is only to say nobody has tried to use this yet, so we havent found them. 
 
-1. add BOP-Unknown-Features DONE
-2. add cutoff value as paper DONE
-5. add prediction map generation - DONE
-6. add SAIL - DONE
+I expect the following will crop up: 
+- Tensor shape for GPYTorch models. - Newer GPYtorch models seem to require a different shaped tensor, I noticed this broke the synthetic function maker so I have ficed it by unsqueezing the tensors. If you get a weird shape error this may be the reason. 
