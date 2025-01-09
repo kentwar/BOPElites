@@ -1,0 +1,27 @@
+name: BOPELITES
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy==1.23.5
+  - pandas
+  - matplotlib
+  - pytorch == 1.12 # PyTorch without specific version to let Conda choose the best compatible version
+  - cudatoolkit  # Removed version to let Conda resolve it based on PyTorch compatibility
+  - sqlite
+  - icu
+  - krb5
+  - libclang
+  - gpytorch
+  - botorch==0.8.1
+  - psutil
+  - gstreamer
+  - gst-plugins-base
+  - qt
+  - qtwebkit
+  - pip
+  - pip:
+      - seaborn
+      - pymoo
+      - scienceplots
