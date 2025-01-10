@@ -30,10 +30,15 @@ the requirements.yml allows for installation with conda. It is currently defined
 
 ## Known Bugs
 
-- There aren't any, which is only to say nobody has tried to use this yet, so we havent found them. 
+- There aren't many, which is only to say nobody has tried to use this yet, so we havent found them. 
 
-I expect the following will crop up: 
+1. the Parsec domain was setup using Xfoil which is old code and a bit fiddly. It didn't compile on my windows machine, so I zipped it up and have stored it in the pyAFT.zip file. In theory it should just unzip and run, but this may be a bit hopeful.
+
+2. I expect the following will crop up: 
 - Tensor shape for GPYTorch models. - Newer GPYtorch models seem to require a different shaped tensor, I noticed this broke the synthetic function maker so I have ficed it by unsqueezing the tensors. If you get a weird shape error this may be the reason.
+
+
+
 
 BOP-Elites has been used in several applications:
 https://dl.acm.org/doi/abs/10.1145/3583131.3590486
