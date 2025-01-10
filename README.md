@@ -8,21 +8,22 @@ See the paper here https://ieeexplore.ieee.org/document/10472301
 BOP-Elites is a Quality Diversity algorithm. Learn more here
 https://quality-diversity.github.io/
 
-# Limitations and Use Case
-## Highly sample efficient
-BOP-Elites is sample efficient, using Bayesian Optimisation to choose where to sample to efficiently balance exploitation and exploration through its acquisition function.
-## Lower input dimensionality
-BOP-Elites utilises Bayesian Optimisation (an adaptation of Expected Improvement) using a Gaussian Process and is therefore only functional on problems with relative low dimensions (for QD usecases).  
-## 1-2d feature space
-BOP-Elites is only programmed to work with 1/2 d feature spaces. While the concept can be extrapolated to (slightly) higher dimensions the number of regions would explode making the probability function for region membership unworkable. BOP-Elites uses a uniformly discretised grid.
+# Use Case
+#### Highly sample efficient
+BOP-Elites is sample efficient, using Bayesian Optimisation to choose where to sample to efficiently balance exploitation and exploration through its acquisition function. It is therefore designed for use in expensive and low dimensional problems such as biological/chemical design where running experiments has a high overhead.
 
-
+# Limitations
+#### Lower input dimensionality
+BOP-Elites utilises Bayesian Optimisation (an adaptation of Expected Improvement) using a Gaussian Process and is therefore only functional on problems with relative low dimensions (for QD usecases), Up to 20 dimensions is normally recommended.  
+#### 1-2d feature space
+BOP-Elites is only programmed to work with 1 or 2 d feature spaces. While the concept can be extrapolated to (slightly) higher dimensions the number of regions would explode making the probability function for region membership unworkable. BOP-Elites uses a uniformly discretised grid. Other methods involve a Voronoi Tessalation approach to region construction, but this would require MC sampling (or some other technique) which is not covered here.
+#### Research code quality
 This is repurposed research code, made available for comparison for scientific purposes. Things may not work as intended because this was developed on linux, and I am now primarily using windows and there were some strange migration issues. 
 so please contact me so we can make the work together 
 
 ### How to use:
 
-There are executable self contained experiments in the tutorials folder. This is intended to show basic usage
+There are executable self contained experiments in the **\tutorials** folder. This is intended to show basic usage. Throughout the code KD means Known Descriptors/Behaviours. The naming 'coupled descriptors' came later during the paper writing stage and describes the idea that observing descriptors is very often coupled to the objective observation.
 
 ## Requirements:
 
